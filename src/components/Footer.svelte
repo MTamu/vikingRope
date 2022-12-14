@@ -1,0 +1,49 @@
+<footer class="bg-viking-grey-background">
+	<div
+		class="mx-auto grid auto-cols-auto text-center sm:max-w-screen-xl sm:grid-flow-col sm:justify-between sm:gap-5 sm:px-10 sm:py-10"
+	>
+		<div class="order-last sm:order-first">
+			<img src="img/logo.png" alt="" class="w-32" />
+		</div>
+		<div>
+			<ul class="sm:mt-8 sm:space-y-3">
+				<li class="mt-7">
+					<a href="">Pagrindinis</a>
+				</li>
+				<li class="mt-7">
+					<a href="">Paslaugos</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<ul class="sm:mt-8 sm:space-y-3">
+				<li class="mt-7">
+					<a href="">Apie mus</a>
+				</li>
+				<li class="mt-7">
+					<a href="">DUK</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<ul class="sm:mt-8 sm:space-y-3">
+				<li class="mt-7">
+					<a href="tel:+37065482654">+37065482654</a>
+				</li>
+				<li class="mt-7">
+					<a href="mailto:vikingropeaccess@gmail.com">vikingropeaccess@gmail.com</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<ul class="sm:mt-8 sm:space-y-3">
+				<li class="mt-7">
+					<a href="">facebook</a>
+				</li>
+				<li class="mt-7">
+					<a href="">Instagram</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</footer>
