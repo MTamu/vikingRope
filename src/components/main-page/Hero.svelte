@@ -1,43 +1,49 @@
 <div class="mx-auto max-w-screen-xl p-3 sm:px-10 sm:pt-10">
-	<div class="grid auto-cols-fr sm:grid-flow-col sm:gap-2 md:gap-14">
+	<div class="grid auto-cols-fr sm:gap-2 md:grid-flow-col md:gap-10 lg:gap-32">
 		<div class="">
 			<div class="border-l-8 border-viking-yellow pl-4 sm:font-medium">
 				<div>Viking Rope Access</div>
 				<h1 class="mt-1 text-left uppercase leading-snug">
-					Aukštuminiai ir<br /> Arboristiniai darbai
+					Aukštuminiai ir<br />Arboristiniai darbai
 				</h1>
 			</div>
-			<p class="mt-5 ml-6 hidden font-medium sm:block">
+			<p class="mt-5 ml-6 hidden font-medium md:block">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
 				magna aliqua
 			</p>
-			<button class="ml-6 hidden rounded border-2 border-viking-yellow py-2 px-4 font-medium sm:mt-8 sm:block md:mt-16">
+			<button class="ml-6 hidden rounded border-2 border-viking-yellow py-2 px-4 font-medium sm:mt-8 md:mt-16 md:block">
 				Kontaktai
 			</button>
 		</div>
-		<div class="p-10 sm:basis-0 sm:p-0">
+		<div class="p-10 sm:basis-0 sm:p-10 md:p-0">
 			<img src="img/tree.svg" alt="" />
 		</div>
 	</div>
-	<div class="grid auto-cols-fr gap-2 sm:mt-32 sm:grid-flow-col">
+	<div class="grid auto-cols-fr gap-4 sm:mt-32 md:grid-flow-col">
 		<div class="flex">
-			<div>icon</div>
-			<div>
+			<div class="mr-8 flex-shrink-0">
+				<img src="img/flexibility.svg" alt="" />
+			</div>
+			<div class="space-y-3">
 				<h2>Lankstus sprendimai</h2>
 				<p>Skiriame daug dėmesio tinkamo, lankstaus ir Jums priimtino sprendimo paieškoms</p>
 			</div>
 		</div>
 		<div class="flex">
-			<div>icon</div>
-			<div>
-				<h3>Kokybė</h3>
+			<div class="mr-8 flex-shrink-0">
+				<img src="img/quality.svg" alt="" />
+			</div>
+			<div class="space-y-3">
+				<h2>Kokybė</h2>
 				<p>Skiriame daug dėmesio tinkamo, lankstaus ir Jums priimtino sprendimo paieškoms</p>
 			</div>
 		</div>
 		<div class="flex">
-			<div>icon</div>
-			<div>
-				<h3>Visoje Lietuvoje</h3>
+			<div class="mr-8 flex-shrink-0">
+				<img src="img/ltShape.svg" alt="" />
+			</div>
+			<div class="space-y-3">
+				<h2>Visoje Lietuvoje</h2>
 				<p>Skiriame daug dėmesio tinkamo, lankstaus ir Jums priimtino sprendimo paieškoms</p>
 			</div>
 		</div>
