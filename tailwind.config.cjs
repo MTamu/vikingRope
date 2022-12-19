@@ -5,7 +5,11 @@ module.exports = {
     extend: {
       colors: {
         'viking-yellow': '#E5AA33',
-        'viking-grey-background': '#F7F7F7'
+        'viking-grey-background': '#F7F7F7',
+        'viking-grey-textBox': '#DFE0DF'
+      },
+      borderWidth: {
+        xl: '20px'
       }
 
     }
