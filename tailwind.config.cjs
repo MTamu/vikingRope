@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
+  content: ['./src/**/*.{html,js,svelte,ts}',
+    './node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'
+  ],
   theme: {
     extend: {
       colors: {
@@ -9,10 +11,14 @@ module.exports = {
         'viking-grey-textBox': '#DFE0DF'
       },
       borderWidth: {
-        xl: '20px'
+        xl: '20px',
+        medium: '15px'
       }
 
     }
   },
-  plugins: []
+  plugins: [
+    require('flowbite/plugin')
+  ],
+  darkMode: 'class'
 }

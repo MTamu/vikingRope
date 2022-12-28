@@ -1,6 +1,6 @@
-<section>
+<section id="about-us">
 	<div class="mx-auto max-w-screen-xl p-3 md:p-0 md:px-10 md:pb-32">
-		<div class="inline-block border-b-8 border-viking-yellow pl-10 uppercase leading-none">
+		<div class="mt-5 inline-block border-b-8 border-viking-yellow pl-10 uppercase leading-none">
 			<h2 class="uppercase">APIE MUS</h2>
 		</div>
 		<div class="flex md:mt-10">

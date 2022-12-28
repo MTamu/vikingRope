@@ -1,3 +1,7 @@
+<script>
+	import Btn from '../elements/Btn.svelte';
+</script>
+
 <section>
 	<div class="mx-auto max-w-screen-xl p-3 sm:px-10 sm:pt-10">
 		<div class="grid auto-cols-fr sm:gap-2 md:grid-flow-col md:gap-10 lg:gap-32">
@@ -12,11 +16,7 @@
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
 					magna aliqua
 				</p>
-				<button
-					class="ml-6 hidden rounded border-2 border-viking-yellow py-2 px-4 font-medium sm:mt-8 md:mt-16 md:block"
-				>
-					Kontaktai
-				</button>
+				<Btn text={'Kontaktai'} href={'/#contacts'} customStyle={'ml-6'} />
 			</div>
 			<div class="p-10 sm:basis-0 sm:p-10 md:p-0">
 				<img src="img/tree.svg" alt="" />

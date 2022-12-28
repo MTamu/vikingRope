@@ -1,9 +1,9 @@
-<footer class="bg-viking-grey-background">
+<footer class="border-t-8 border-viking-yellow bg-viking-grey-background">
 	<div
 		class="mx-auto grid auto-cols-auto text-center sm:max-w-screen-xl sm:grid-flow-col sm:justify-between sm:gap-5 sm:px-10 sm:py-10 sm:text-left"
 	>
 		<div class="order-last sm:order-first">
-			<img src="img/logo.png" alt="" class="w-32" />
+			<img src="/img/logo.png" alt="" class="w-32" />
 		</div>
 		<div>
 			<ul class="sm:mt-8 sm:space-y-3">
