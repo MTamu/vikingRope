@@ -1,5 +1,12 @@
 <script>
 	import Btn from '../elements/Btn.svelte';
+	import { renderRichText } from '@storyblok/svelte';
+
+	export let cmsData;
+
+	console.log(cmsData);
+
+	$: resolvedTitleHtml = renderRichText(cmsData.main_title);
 </script>
 
 <section>
@@ -7,14 +14,13 @@
 		<div class="grid auto-cols-fr sm:gap-2 md:grid-flow-col md:gap-10 lg:gap-32">
 			<div class="">
 				<div class="border-l-8 border-viking-yellow pl-4 sm:font-medium">
-					<div>Viking Rope Access</div>
+					<div>{cmsData.before_title}</div>
 					<h1 class="mt-1 text-left uppercase leading-snug lg:whitespace-nowrap">
-						Aukštuminiai ir<br />Arboristiniai darbai
+						{@html resolvedTitleHtml}
 					</h1>
 				</div>
 				<p class="mt-5 ml-6 hidden font-medium md:block">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-					magna aliqua
+					{cmsData.short_description}
 				</p>
 				<Btn text={'Kontaktai'} href={'/#contacts'} customStyle={'ml-6'} />
 			</div>
@@ -23,33 +29,17 @@
 			</div>
 		</div>
 		<div class="grid auto-cols-fr gap-4 md:mt-20 md:grid-flow-col">
-			<div class="flex">
-				<div class="mr-8 flex-shrink-0">
-					<img src="img/flexibility.svg" alt="" />
+			{#each cmsData.advantages_blocks as block}
+				<div class="flex">
+					<div class="mr-8 flex-shrink-0">
+						{@html block.logo}
+					</div>
+					<div class="space-y-3">
+						<h2>{block.title}</h2>
+						<p>{block.description}</p>
+					</div>
 				</div>
-				<div class="space-y-3">
-					<h2>Lankstus sprendimai</h2>
-					<p>Skiriame daug dėmesio tinkamo, lankstaus ir Jums priimtino sprendimo paieškoms</p>
-				</div>
-			</div>
-			<div class="flex">
-				<div class="mr-8 flex-shrink-0">
-					<img src="img/quality.svg" alt="" />
-				</div>
-				<div class="space-y-3">
-					<h2>Kokybė</h2>
-					<p>Skiriame daug dėmesio tinkamo, lankstaus ir Jums priimtino sprendimo paieškoms</p>
-				</div>
-			</div>
-			<div class="flex">
-				<div class="mr-8 flex-shrink-0">
-					<img src="img/ltShape.svg" alt="" />
-				</div>
-				<div class="space-y-3">
-					<h2>Visoje Lietuvoje</h2>
-					<p>Skiriame daug dėmesio tinkamo, lankstaus ir Jums priimtino sprendimo paieškoms</p>
-				</div>
-			</div>
+			{/each}
 		</div>
 	</div>
 </section>

@@ -1,4 +1,8 @@
-<section id="contacts" class="bg-white">
+<script>
+	export let bgColor = 'bg-white';
+</script>
+
+<section id="contacts" class="{bgColor} mt-0">
 	<div class="pt- mx-auto flex max-w-screen-xl justify-center pt-24 md:px-10 md:pb-32">
 		<div class="flex flex-col gap-14 border-l-medium border-viking-yellow px-10 text-center">
 			<h3 class="font-medium tracking-wide">Skambinkite arba rašykite</h3>

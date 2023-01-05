@@ -4,6 +4,10 @@
 	import About from '../components/main-page/About.svelte';
 	import Faq from '../components/main-page/Faq.svelte';
 	import Contacts from '../components/Contacts.svelte';
+
+	export let data;
+
+	// console.log(data.story);
 </script>
 
 <svelte:head>
@@ -12,8 +16,8 @@
 	<!-- To do -->
 </svelte:head>
 
-<Hero />
-<Services />
+<Hero cmsData={data.story.hero} />
+<Services data={data.story.services} />
 <About />
 <Faq />
 <Contacts />

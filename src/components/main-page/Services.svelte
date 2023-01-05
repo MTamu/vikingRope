@@ -1,5 +1,7 @@
 <script>
 	import Btn from '../elements/Btn.svelte';
+
+	export let data;
 </script>
 
 <section class="bg-viking-grey-background md:mt-32">

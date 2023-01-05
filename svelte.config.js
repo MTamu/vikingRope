@@ -5,6 +5,7 @@ import preprocess from 'svelte-preprocess'
 const config = {
   kit: {
     alias: {
+      '@storyblok/svelte': './node_modules/@storyblok/svelte',
       $components: 'src/components'
     },
     adapter: adapter()
