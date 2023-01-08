@@ -4,7 +4,7 @@
 
 	export let cmsData;
 
-	console.log(cmsData);
+	// console.log(cmsData);
 
 	$: resolvedTitleHtml = renderRichText(cmsData.main_title);
 </script>
@@ -15,7 +15,7 @@
 			<div class="">
 				<div class="border-l-8 border-viking-yellow pl-4 sm:font-medium">
 					<div>{cmsData.before_title}</div>
-					<h1 class="mt-1 text-left uppercase leading-snug lg:whitespace-nowrap">
+					<h1 class="mt-1 text-left leading-snug lg:whitespace-nowrap">
 						{@html resolvedTitleHtml}
 					</h1>
 				</div>

@@ -1,7 +1,16 @@
 <script>
+	import { onDestroy, onMount } from 'svelte';
 	import Contacts from '../../components/Contacts.svelte';
 	import ServicesList from '../../components/service-page/ServicesList.svelte';
 	import WorkExamples from '../../components/service-page/WorkSamples.svelte';
+
+	onMount(() => {
+		console.log('Component page/component is created');
+	});
+
+	onDestroy(() => {
+		console.log('Component/Page is destroyed');
+	});
 </script>
 
 <section>
