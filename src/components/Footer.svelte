@@ -38,10 +38,10 @@
 		<div>
 			<ul class="sm:mt-8 sm:space-y-3">
 				<li class="mt-7">
-					<a href="">facebook</a>
+					<a href="https://www.facebook.com/ropeaccessworker" target="_blank" rel="noopener noreferrer">facebook</a>
 				</li>
 				<li class="mt-7">
-					<a href="">Instagram</a>
+					<a href="https://www.instagram.com/roadmiles_maurito/" target="_blank" rel="noopener noreferrer">Instagram</a>
 				</li>
 			</ul>
 		</div>

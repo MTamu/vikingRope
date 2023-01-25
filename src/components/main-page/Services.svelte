@@ -18,7 +18,7 @@
 					<p>
 						{service.description}
 					</p>
-					<Btn text={'Daugiau'} href="/rope-access-service" />
+					<Btn text={service.btn[0].text} href={service.btn[0].href} />
 				</div>
 				<div class="md:pt-6 order-{Math.abs(+service.order - 1)}">
 					<img class="rounded-sm" src={service.img.filename} alt="" />

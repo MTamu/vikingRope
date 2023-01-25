@@ -4,13 +4,13 @@
 	import ServicesList from '../../components/service-page/ServicesList.svelte';
 	import WorkExamples from '../../components/service-page/WorkSamples.svelte';
 
-	onMount(() => {
-		console.log('Component page/component is created');
-	});
+	import { page } from '$app/stores';
+	console.log($page.data.story);
 
-	onDestroy(() => {
-		console.log('Component/Page is destroyed');
-	});
+	export let data;
+
+	// console.log(window);
+	console.log(document.getElementById('contacts'));
 </script>
 
 <section>
@@ -31,6 +31,6 @@
 		</div>
 		<ServicesList />
 	</div>
-	<Contacts bgColor={'bg-viking-grey-background'} />
+	<Contacts cmsData={data.story.contacts} bgColor={'bg-viking-grey-background'} />
 	<WorkExamples />
 </section>

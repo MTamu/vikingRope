@@ -2,6 +2,8 @@
 	import Contacts from '../../components/Contacts.svelte';
 	import ServicesList from '../../components/service-page/ServicesList.svelte';
 	import WorkExamples from '../../components/service-page/WorkSamples.svelte';
+
+	export let data;
 </script>
 
 <section>
@@ -22,6 +24,6 @@
 		</div>
 		<ServicesList />
 	</div>
-	<Contacts bgColor={'bg-viking-grey-background'} />
+	<Contacts cmsData={data.story.contacts} bgColor={'bg-viking-grey-background'} />
 	<WorkExamples />
 </section>

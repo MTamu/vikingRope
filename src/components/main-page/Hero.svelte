@@ -4,6 +4,8 @@
 
 	export let cmsData;
 
+	const btn = cmsData.button[0];
+
 	// console.log(cmsData);
 
 	$: resolvedTitleHtml = renderRichText(cmsData.main_title);
@@ -22,7 +24,7 @@
 				<p class="mt-5 ml-6 hidden font-medium md:block">
 					{cmsData.short_description}
 				</p>
-				<Btn text={'Kontaktai'} href={'/#contacts'} customStyle={'ml-6'} />
+				<Btn text={btn.text} href={'/#contacts'} customStyle={'ml-6'} />
 			</div>
 			<div class="p-10 sm:basis-0 sm:p-10 md:p-0">
 				<img src="img/tree.svg" alt="" />
