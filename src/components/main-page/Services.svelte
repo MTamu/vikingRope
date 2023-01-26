@@ -3,8 +3,6 @@
 	import Btn from '../elements/Btn.svelte';
 
 	export let cmsData;
-
-	console.log(cmsData);
 </script>
 
 <section class="bg-viking-grey-background md:mt-32">

@@ -8,7 +8,14 @@ export async function load () {
   })
   const storyblokApi = await useStoryblokApi()
 
+  const footer = await storyblokApi.get('cdn/stories/footer-section', {
+    version: 'draft'
+  })
+
+  const footerData = footer.data.story.content.body[0]
+
   return {
-    storyblokApi
+    storyblokApi,
+    footerData
   }
 }

@@ -6,8 +6,6 @@
 	import Contacts from '../components/Contacts.svelte';
 
 	export let data;
-
-	console.log('server or browser');
 </script>
 
 <svelte:head>
