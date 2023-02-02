@@ -1,7 +1,5 @@
 <script>
 	export let cmsData;
-
-	console.log(cmsData);
 </script>
 
 <footer class="border-t-8 border-viking-yellow bg-viking-grey-background">

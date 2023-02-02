@@ -1,5 +1,8 @@
 <script>
 	import Btn from '../elements/Btn.svelte';
+
+	export let cmsData;
+	console.log('🚀 ~ file: WorkSamples.svelte:5 ~ cmsData', cmsData);
 </script>
 
 <section class=" md:mt-12">

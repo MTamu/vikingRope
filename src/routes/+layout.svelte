@@ -2,7 +2,6 @@
 	import Header from '$components/Header.svelte';
 	import Footer from '$components/Footer.svelte';
 	import './styles.css';
-	import { dataset_dev } from 'svelte/internal';
 
 	export let data;
 </script>

@@ -11,11 +11,16 @@ export async function load () {
   const footer = await storyblokApi.get('cdn/stories/footer-section', {
     version: 'draft'
   })
+  const contacts = await storyblokApi.get('cdn/stories/contact-section', {
+    version: 'draft'
+  })
 
   const footerData = footer.data.story.content.body[0]
+  const contactsData = contacts.data.story.content.body[0]
 
   return {
     storyblokApi,
-    footerData
+    footerData,
+    contactsData
   }
 }

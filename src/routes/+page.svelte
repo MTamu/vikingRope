@@ -6,6 +6,8 @@
 	import Contacts from '../components/Contacts.svelte';
 
 	export let data;
+
+	console.log(data);
 </script>
 
 <svelte:head>
@@ -18,4 +20,4 @@
 <Services cmsData={data.story.services} />
 <About cmsData={data.story.about} />
 <Faq cmsData={data.story.faq} />
-<Contacts cmsData={data.story.contacts} />
+<Contacts cmsData={data.contactsData} />

@@ -5,12 +5,6 @@
 	import WorkExamples from '../../components/service-page/WorkSamples.svelte';
 
 	import { page } from '$app/stores';
-	console.log($page.data.story);
-
-	export let data;
-
-	// console.log(window);
-	console.log(document.getElementById('contacts'));
 </script>
 
 <section>
@@ -29,8 +23,8 @@
 			optio alias, minima saepe quia fugiat esse? Nobis repellendus vel tempora perferendis exercitationem, est quasi ex
 			suscipit labore dignissimos consequuntur veritatis corrupti ipsam.
 		</div>
-		<ServicesList />
+		<!-- <ServicesList /> -->
 	</div>
-	<Contacts cmsData={data.story.contacts} bgColor={'bg-viking-grey-background'} />
+	<Contacts cmsData={$page.data.contactsData} bgColor={'bg-viking-grey-background'} />
 	<WorkExamples />
 </section>
