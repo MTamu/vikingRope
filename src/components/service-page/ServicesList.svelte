@@ -10,11 +10,11 @@
 			<div class="inline-block border-b-8 border-viking-yellow pl-6 uppercase leading-none">
 				<h2>{cmsData.title}</h2>
 			</div>
-			<Accordion flush>
+			<Accordion multiple flush>
 				{#each cmsData.services as service}
 					<AccordionItem>
 						<span slot="header" class="text-lg font-normal text-black">{service.service_name}</span>
-						<p class="mb-2 p-2 text-black">
+						<p class="mb-2 border-b-2 p-2 text-gray-500">
 							{service.service_description}
 						</p>
 					</AccordionItem>

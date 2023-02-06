@@ -1,30 +1,30 @@
 <script>
-	import { onDestroy, onMount } from 'svelte';
 	import Contacts from '../../components/Contacts.svelte';
 	import ServicesList from '../../components/service-page/ServicesList.svelte';
-	import WorkExamples from '../../components/service-page/WorkSamples.svelte';
+	import WorkSamples from '../../components/service-page/WorkSamples.svelte';
+	import { renderRichText } from '@storyblok/svelte';
 
-	import { page } from '$app/stores';
+	export let data;
+	console.log('🚀 ~ file: +page.svelte:8 ~ data', data);
+
+	$: descriptionText = renderRichText(data.story.hero_section.service_description);
 </script>
 
 <section>
 	<div class="mx-auto max-w-screen-xl p-3 sm:px-10 sm:pt-10">
 		<div class="mb-6 flex justify-center">
 			<div class="inline-block border-b-8 border-viking-yellow pl-10 leading-none">
-				<h1 class="uppercase">Arboristiniai darbai</h1>
+				<h1 class="uppercase">{data.story.hero_section.title}</h1>
 			</div>
 		</div>
 
 		<div>
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis consequatur, corrupti facere excepturi ex
-			perspiciatis nisi dolore fuga quaerat, optio minus adipisci possimus nostrum atque aliquam reprehenderit obcaecati
-			quas? Nesciunt officiis sed quos beatae, magni nisi omnis at repellat accusamus!<br /><br />
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta error animi est ipsam quaerat impedit amet deserunt,
-			optio alias, minima saepe quia fugiat esse? Nobis repellendus vel tempora perferendis exercitationem, est quasi ex
-			suscipit labore dignissimos consequuntur veritatis corrupti ipsam.
+			{@html descriptionText}
 		</div>
-		<!-- <ServicesList /> -->
+		<ServicesList cmsData={data.story.services_list} />
 	</div>
-	<Contacts cmsData={$page.data.contactsData} bgColor={'bg-viking-grey-background'} />
-	<WorkExamples />
+	<Contacts cmsData={data.contactsData} bgColor={'bg-viking-grey-background'} />
+	{#if data.story.sample_list.samples.length !== 0}
+		<WorkSamples cmsData={data.story.sample_list} />
+	{/if}
 </section>

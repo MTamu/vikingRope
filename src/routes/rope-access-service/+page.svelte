@@ -24,5 +24,7 @@
 		<ServicesList cmsData={data.story.services_list} />
 	</div>
 	<Contacts cmsData={data.contactsData} bgColor={'bg-viking-grey-background'} />
-	<WorkSamples cmsData={data.story.sample_list} />
+	{#if data.story.sample_list.samples.length !== 0}
+		<WorkSamples cmsData={data.story.sample_list} />
+	{/if}
 </section>
