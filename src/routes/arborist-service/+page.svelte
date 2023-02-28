@@ -1,11 +1,10 @@
 <script>
-	import Contacts from '../../components/Contacts.svelte';
-	import ServicesList from '../../components/service-page/ServicesList.svelte';
-	import WorkSamples from '../../components/service-page/WorkSamples.svelte';
+	import Contacts from '$components/Contacts.svelte';
+	import ServicesList from '$components/service-page/ServicesList.svelte';
+	import WorkSamples from '$components/service-page/WorkSamples.svelte';
 	import { renderRichText } from '@storyblok/svelte';
 
 	export let data;
-	console.log('🚀 ~ file: +page.svelte:8 ~ data', data);
 
 	$: descriptionText = renderRichText(data.story.hero_section.service_description);
 </script>

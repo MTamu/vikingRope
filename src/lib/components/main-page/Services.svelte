@@ -18,7 +18,7 @@
 					</p>
 					<Btn text={service.btn[0].text} href={service.btn[0].href} />
 				</div>
-				<div class="md:pt-6 order-{Math.abs(+service.order - 1)}">
+				<div class="order-{Math.abs(+service.order - 1)} md:pt-6}">
 					<img class="rounded-sm" src={service.img.filename} alt="" />
 				</div>
 			</div>

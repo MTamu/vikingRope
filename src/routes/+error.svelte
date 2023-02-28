@@ -1,5 +1,5 @@
 <script>
-	import Btn from '../components/elements/Btn.svelte';
+	import Btn from '$components/elements/Btn.svelte';
 	import { page } from '$app/stores';
 
 	export let data;

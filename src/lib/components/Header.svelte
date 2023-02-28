@@ -1,9 +1,36 @@
 <script>
-	import { Button, Chevron, Dropdown, DropdownItem, DropdownDivider, DropdownHeader } from 'flowbite-svelte';
+	import { Dropdown, DropdownItem } from 'flowbite-svelte';
+	import { onMount } from 'svelte';
+	import { language } from '$stores/language';
+	import { invalidateAll } from '$app/navigation';
+
+	// let pageLanguage = 'en';
+
+	// onMount(() => {
+	// 	const userLocation = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+	// 	if (!userLocation.includes('Vilnius')) {
+	// 		pageLanguage = 'EN';
+	// 	}
+	// });
+	// Set language based on user location
+
+	let lanSelect = $language;
+
+	function changeLanguage() {
+		language.set(lanSelect);
+		invalidateAll();
+		console.log(lanSelect);
+	}
 </script>
 
 <header>
 	<nav class="mx-auto hidden max-w-screen-xl lg:flex lg:justify-end lg:gap-10 lg:p-10 lg:text-lg lg:leading-none">
+		<select bind:value={lanSelect} on:change={changeLanguage}>
+			<option value="en">EN</option>
+			<option value="lt">LT</option>
+		</select>
+
 		<a href="/">Pagrindinis</a>
 		<div class="relative">
 			<button id="services-btn" class="relative flex items-center gap-1">
