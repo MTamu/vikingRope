@@ -11,7 +11,7 @@
 	$: resolvedTitleHtml = renderRichText(cmsData.main_title);
 </script>
 
-<section>
+<section class=" pt-28">
 	<div class="mx-auto max-w-screen-xl p-3 sm:px-10 sm:pt-10">
 		<div class="grid auto-cols-fr sm:gap-2 md:grid-flow-col md:gap-10 lg:gap-32">
 			<div class="">

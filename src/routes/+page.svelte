@@ -17,8 +17,6 @@
 	<!-- To do -->
 </svelte:head>
 
-<h1>The language is {$language}</h1>
-
 <Hero cmsData={data.story.hero} />
 <Services cmsData={data.story.services} />
 <About cmsData={data.story.about} />

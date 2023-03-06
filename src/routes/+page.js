@@ -7,8 +7,6 @@ language.subscribe(value => {
 })
 
 export async function load ({ parent }) {
-  console.log(pageLanguage + 'this is from load function')
-
   const { storyblokApi } = await parent()
 
   const dataStory = await storyblokApi.get(`cdn/stories/main-page?language=${pageLanguage}`, {
