@@ -13,8 +13,8 @@
 	}
 </script>
 
-<section>
-	<div class="mx-auto max-w-screen-xl p-3 text-center md:p-0 md:px-10 md:pb-32">
+<section class=" pt-28">
+	<div class="mx-auto max-w-screen-xl p-3 text-center md:p-0 md:px-10 md:pb-72">
 		<div class="grid auto-cols-fr md:grid-flow-col">
 			<div class="md:mt-16 md:text-left">
 				<p class=" text-2xl font-medium">Ooops!</p>

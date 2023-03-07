@@ -4,10 +4,12 @@
 	import './styles.css';
 
 	export let data;
+
+	$: console.log(data);
 </script>
 
 <div class="app">
-	<Header />
+	<Header cmsData={data.contactsData} />
 
 	<main>
 		<slot />

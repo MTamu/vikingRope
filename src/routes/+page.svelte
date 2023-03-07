@@ -9,10 +9,12 @@
 	import { onMount } from 'svelte';
 
 	export let data;
+
+	console.log(data);
 </script>
 
 <svelte:head>
-	<title>Pagrindinis</title>
+	<title>Viking Rope Access</title>
 	<meta name="description" content="Svelte demo app" />
 	<!-- To do -->
 </svelte:head>

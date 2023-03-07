@@ -33,7 +33,7 @@
 		</div>
 
 		{#if cmsData.feedback.length !== 0}
-			<div class="mt-36">
+			<div class=" mt-20">
 				<div class="mb-10 inline-block border-b-8 border-viking-yellow pl-10 uppercase leading-none">
 					<h2>{cmsData.feedback_title}</h2>
 				</div>
