@@ -6,13 +6,13 @@
 
 	const btn = cmsData.button[0];
 
-	// console.log(cmsData);
+	console.log(cmsData);
 
 	$: resolvedTitleHtml = renderRichText(cmsData.main_title);
 </script>
 
-<section class=" pt-28">
-	<div class="mx-auto max-w-screen-xl p-3 sm:px-10 sm:pt-10">
+<section class=" pt-16 sm:pt-28">
+	<div class="md mx-auto max-w-screen-xl p-3 pb-16 md:pb-32 lg:px-10 lg:pt-10">
 		<div class="grid auto-cols-fr sm:gap-2 md:grid-flow-col md:gap-10 lg:gap-32">
 			<div class="">
 				<div class="border-l-8 border-viking-yellow pl-4 sm:font-medium">
@@ -24,13 +24,18 @@
 				<p class="mt-5 ml-6 hidden font-medium md:block">
 					{cmsData.short_description}
 				</p>
-				<Btn text={btn.text} href={'/#contacts'} customStyle={'ml-6'} />
+				<div class="hidden md:block">
+					<Btn text={btn.text} href={'/#contacts'} customStyle={'ml-6'} />
+				</div>
 			</div>
 			<div class="p-10 sm:basis-0 sm:p-10 md:p-0">
 				<img src="img/tree.svg" alt="" />
 			</div>
+			<div class="flex justify-center md:hidden">
+				<a class="rounded bg-viking-yellow p-2 font-medium tracking-wider" href="tel:+37065482654">+37065482654</a>
+			</div>
 		</div>
-		<div class="grid auto-cols-fr gap-4 md:mt-20 md:grid-flow-col">
+		<div class=" mt-32 grid auto-cols-fr gap-10 md:mt-20 md:grid-flow-col md:gap-4">
 			{#each cmsData.advantages_blocks as block}
 				<div class="flex">
 					<div class="mr-8 flex-shrink-0">

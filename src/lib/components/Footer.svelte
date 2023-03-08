@@ -4,15 +4,15 @@
 
 <footer class="border-t-8 border-viking-yellow bg-viking-grey-background">
 	<div
-		class="mx-auto grid auto-cols-auto text-center sm:max-w-screen-xl sm:grid-flow-col sm:justify-between sm:gap-5 sm:px-10 sm:py-10 sm:text-left"
+		class="mx-auto grid auto-cols-auto pt-10 pb-14 text-center lg:max-w-screen-xl lg:grid-flow-col lg:justify-between lg:gap-5 lg:p-10 lg:pb-0 lg:text-left"
 	>
-		<div class="order-last flex flex-col items-center gap-5 sm:order-first">
+		<div class="order-last flex flex-col items-center gap-5 lg:order-first">
 			<img src="/img/logo.png" alt="" class="w-32" />
 			<div class="text-xs">© 2023. Visos teisės saugomos</div>
 		</div>
 		<div>
-			<ul class="sm:mt-8 sm:space-y-3">
-				<li class="mt-7">
+			<ul class="lg:mt-8 lg:space-y-3">
+				<li class="mt-7 hidden lg:block">
 					<a href="" class="border-viking-yellow hover:border-b-4">Pagrindinis</a>
 				</li>
 				<li class="mt-7">
@@ -21,7 +21,7 @@
 			</ul>
 		</div>
 		<div>
-			<ul class="sm:mt-8 sm:space-y-3">
+			<ul class="lg:mt-8 lg:space-y-3">
 				<li class="mt-7">
 					<a href="" class="border-viking-yellow hover:border-b-4">Apie mus</a>
 				</li>
@@ -31,7 +31,7 @@
 			</ul>
 		</div>
 		<div>
-			<ul class="sm:mt-8 sm:space-y-3">
+			<ul class="lg:mt-8 lg:space-y-3">
 				<li class="mt-7">
 					<a href="tel:+37065482654">
 						<span><img src="/img/phone-icon.svg" alt="" class="mr-2 inline" /></span>
@@ -47,7 +47,7 @@
 			</ul>
 		</div>
 		<div>
-			<ul class="sm:mt-8 sm:space-y-3">
+			<ul class="mb-7 flex justify-center gap-5 lg:my-0 lg:block lg:space-y-3">
 				<li class="mt-7">
 					<a href={cmsData.facebook.url} target="_blank" rel="noopener noreferrer"
 						><img src="/img/fb-icon.svg" alt="" /></a

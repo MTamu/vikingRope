@@ -2,10 +2,26 @@
 	import Header from '$components/Header.svelte';
 	import Footer from '$components/Footer.svelte';
 	import './styles.css';
+	import { onMount } from 'svelte';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
 
 	export let data;
 
-	$: console.log(data);
+	let root;
+
+	onMount(() => {
+		root = document.getElementsByTagName('html')[0];
+
+		root?.classList.add('smoothscroll');
+	});
+
+	beforeNavigate(() => {
+		root?.classList.remove('smoothscroll');
+	});
+
+	afterNavigate(() => {
+		root?.classList.add('smoothscroll');
+	});
 </script>
 
 <div class="app">

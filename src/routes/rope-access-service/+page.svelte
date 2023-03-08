@@ -12,12 +12,12 @@
 <section class=" pt-28">
 	<div class="mx-auto max-w-screen-xl p-3 sm:px-10 sm:pt-10">
 		<div class="mb-6 flex justify-center">
-			<div class="inline-block border-b-8 border-viking-yellow pl-10 leading-none">
+			<div class="inline-block border-b-8 border-viking-yellow pl-2 leading-none md:pl-10">
 				<h1 class="uppercase">{data.story.hero_section.title}</h1>
 			</div>
 		</div>
 
-		<div>
+		<div class="mt-10 md:mt-0">
 			{@html descriptionText}
 		</div>
 		<ServicesList cmsData={data.story.services_list} />

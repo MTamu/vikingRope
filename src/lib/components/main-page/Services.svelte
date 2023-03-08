@@ -5,21 +5,26 @@
 	export let cmsData;
 </script>
 
-<section class="bg-viking-grey-background md:mt-32">
-	<div class="mx-auto max-w-screen-xl p-3 md:p-0 md:px-10 md:pb-10">
+<section class="bg-viking-grey-background">
+	<div class="mx-auto max-w-screen-xl p-3 py-10 md:p-0 md:py-0 md:px-10 md:pb-10 md:pt-5">
 		{#each cmsData.service as service}
 			<div class="grid auto-cols-fr sm:gap-2 md:grid-flow-col md:gap-10 lg:gap-32 lg:pb-20">
-				<div class="order-2 mt-5 md:space-y-5">
+				<div class=" md:order-2 md:space-y-5">
 					<div class="inline-block border-b-8 border-viking-yellow pl-10 uppercase leading-none">
 						<h2>{service.title}</h2>
 					</div>
-					<p>
+					<p class="mt-6">
 						{service.description}
 					</p>
-					<Btn text={service.btn[0].text} href={service.btn[0].href} />
+					<div class="hidden md:block">
+						<Btn text={service.btn[0].text} href={service.btn[0].href} />
+					</div>
 				</div>
-				<div class="order-{Math.abs(service.order)} md:pt-6">
+				<div class="md:order-{Math.abs(service.order)} mt-10 md:mt-0 md:pt-6">
 					<img class="rounded-sm" src={service.img.filename} alt="" />
+				</div>
+				<div class="mt-10 mb-10 flex justify-center md:hidden">
+					<Btn text={service.btn[0].text} href={service.btn[0].href} />
 				</div>
 			</div>
 		{/each}

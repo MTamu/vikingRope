@@ -18,11 +18,11 @@
 	};
 
 	const getDisplayOrder = (index) => {
-		return index % 2 ? [1, 2] : [2, 1];
+		return index % 2 ? ['order-1', 'order-2'] : ['order-2', 'order-1'];
 	};
 </script>
 
-<section class=" md:mt-12">
+<section class="pt-10 md:mt-12 md:pt-0">
 	<div class="mb-6 flex justify-center">
 		<div class="inline-block border-b-8 border-viking-yellow pl-10 leading-none">
 			<h2 class="uppercase">{cmsData.title}</h2>
@@ -30,12 +30,12 @@
 	</div>
 	<div class="mx-auto max-w-screen-xl p-3 md:p-0 md:px-10 md:pb-32">
 		{#each samples.slice(0, loadCount) as sample, index}
-			<div class="grid auto-cols-fr sm:gap-2 md:grid-flow-col md:gap-10 lg:gap-32">
-				<div class="order-{getDisplayOrder(index)[0]} mt-5 md:space-y-5">
+			<div class="grid auto-cols-fr pb-20 sm:gap-2 md:grid-flow-col md:gap-10 md:pb-20 lg:gap-32">
+				<div class="md:{getDisplayOrder(index)[0]} mt-5 md:space-y-5">
 					{@html renderRichText(sample.sample_description)}
 				</div>
-				<div class="order-{getDisplayOrder(index)[1]} md:pt-6">
-					<img class="rounded-sm" src="{sample.sample_img[0].filename}/m/filters:quality(50)" alt="" />
+				<div class="md:{getDisplayOrder(index)[1]} pt-6">
+					<img class="rounded-sm" src="{sample.sample_img[0].filename}/m/filters:quality(50)" alt="Work sample" />
 				</div>
 			</div>
 		{/each}
@@ -60,3 +60,13 @@
 		{/if}
 	</div>
 </section>
+
+<style>
+	.order-1 {
+		order: 1;
+	}
+
+	.order-2 {
+		order: 2;
+	}
+</style>

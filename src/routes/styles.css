@@ -9,9 +9,7 @@
   font-size: 18px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html.smoothscroll{ scroll-behavior: smooth }
 
 body {
   min-height: 100vh;

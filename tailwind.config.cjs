@@ -12,7 +12,8 @@ module.exports = {
       },
       borderWidth: {
         xl: '20px',
-        medium: '15px'
+        medium: '15px',
+        small: '7px'
       }
 
     }

@@ -10,7 +10,7 @@
 </script>
 
 <section id="faq" class="bg-viking-grey-background">
-	<div class="mx-auto max-w-screen-xl p-3 md:px-10 md:pt-20 md:pb-20">
+	<div class="mx-auto max-w-screen-xl p-3 py-10 md:px-10 md:py-20">
 		<div class="mb-6 flex justify-center">
 			<div class="mt-5 border-b-8 border-viking-yellow pl-10 text-center uppercase leading-none">
 				<h2 class="uppercase">{cmsData.title}</h2>
