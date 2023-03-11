@@ -12,7 +12,6 @@
 </script>
 
 <svelte:head>
-	<title>Viking Rope Access</title>
 	<meta name="description" content="Svelte demo app" />
 	<!-- To do -->
 </svelte:head>

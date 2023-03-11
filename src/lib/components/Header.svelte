@@ -4,9 +4,8 @@
 	import { language } from '$stores/language';
 	import { invalidateAll } from '$app/navigation';
 
-	export let cmsData;
-
-	console.log(cmsData);
+	export let contactsData;
+	export let navData;
 
 	// onMount(() => {
 	// 	const userLocation = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -42,31 +41,36 @@
 <header>
 	<nav class="mx-auto hidden max-w-screen-xl justify-end lg:mr-auto lg:flex">
 		<div class="lg:flex lg:gap-10 lg:p-6 lg:text-lg">
-			<a href="/" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline">Pagrindinis</a>
+			<a href="/" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline">{navData.home}</a>
 			<div class="relative">
 				<button id="services-btn" class="relative flex items-center gap-1">
-					<span class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline">Paslaugos</span>
+					<span class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline"
+						>{navData.services}</span
+					>
 					<div class="sm:pt-1">
 						<img src="img/arrowDown.svg" alt="" />
 					</div>
 				</button>
 			</div>
 
-			<a href="/#about-us" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline">Apie mus</a>
-			<a href="/#faq" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline">DUK</a>
-			<a href="/#contacts" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline">Kontaktai</a
+			<a href="/#about-us" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline"
+				>{navData.about}</a
+			>
+			<a href="/#faq" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline">{navData.faq}</a>
+			<a href="/#contacts" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline"
+				>{navData.contacts}</a
 			>
 
 			<Dropdown triggeredBy="#services-btn" class="dropdownMenu z-20 w-44">
 				<DropdownItem
 					href="/rope-access-service"
 					class="decoration-viking-yellow decoration-4 underline-offset-8 hover:bg-inherit hover:underline"
-					>Aukštuminiai darbai</DropdownItem
+					>{navData.rope_access}</DropdownItem
 				>
 				<DropdownItem
 					href="/arborist-service"
 					class="decoration-viking-yellow decoration-4 underline-offset-8 hover:bg-inherit hover:underline"
-					>Arboristiniai darbai</DropdownItem
+					>{navData.arborism}</DropdownItem
 				>
 			</Dropdown>
 
@@ -102,18 +106,20 @@
 		{#if mobileNavOpen}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div on:click={handleMobileMenu} class="flex h-screen flex-col items-center gap-14 pt-12">
-				<a href="/">Pagrindinis</a>
-				<a href="/rope-access-service">Aukštuminiai darbai</a>
-				<a href="/arborist-service">Arboristiniai darbai</a>
-				<a href="/#about-us">Apie mus</a>
-				<a href="/#faq">DUK</a>
+				<a href="/">{navData.home}</a>
+				<a href="/rope-access-service">{navData.rope_access}</a>
+				<a href="/arborist-service">{navData.arborism}</a>
+				<a href="/#about-us">{navData.about}</a>
+				<a href="/#faq">{navData.faq}</a>
 
 				<div class="">
-					<a class="rounded bg-viking-yellow p-2 font-medium tracking-wider" href="tel:+37065482654">{cmsData.phone}</a>
+					<a class="rounded bg-viking-yellow p-2 font-medium tracking-wider" href="tel:+37065482654"
+						>{contactsData.phone}</a
+					>
 				</div>
 				<div>
 					<a class="rounded bg-viking-yellow p-2 font-medium tracking-wider" href="mailto:vikingropeaccess@gmail.com"
-						>{cmsData.email}</a
+						>{contactsData.email}</a
 					>
 				</div>
 			</div>
@@ -124,7 +130,7 @@
 <style>
 	select {
 		appearance: none;
-		background-image: url('img/arrowDown.svg');
+		background-image: url('/img/arrowDown.svg');
 		background-position: 1.5rem 0.8rem;
 		background-repeat: no-repeat;
 		padding-right: 0.8rem;

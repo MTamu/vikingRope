@@ -1,5 +1,7 @@
 <script>
+	import { Dropdown, DropdownItem } from 'flowbite-svelte';
 	export let cmsData;
+	export let navData;
 </script>
 
 <footer class="border-t-8 border-viking-yellow bg-viking-grey-background">
@@ -13,20 +15,40 @@
 		<div>
 			<ul class="lg:mt-8 lg:space-y-3">
 				<li class="mt-7 hidden lg:block">
-					<a href="" class="border-viking-yellow hover:border-b-4">Pagrindinis</a>
+					<a href="/" class="border-viking-yellow hover:border-b-4">{navData.home}</a>
 				</li>
-				<li class="mt-7">
-					<a href="" class="border-viking-yellow hover:border-b-4">Paslaugos</a>
+				<li class="mt-7 flex justify-center lg:block">
+					<button id="services-btn" class=" flex items-center gap-1">
+						<span class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline"
+							>{navData.services}</span
+						>
+						<div class="sm:pt-1">
+							<img src="img/arrowDown.svg" alt="" />
+						</div>
+					</button>
 				</li>
 			</ul>
+
+			<Dropdown triggeredBy="#services-btn" class="dropdownMenu z-20 w-44">
+				<DropdownItem
+					href="/rope-access-service"
+					class="decoration-viking-yellow decoration-4 underline-offset-8 hover:bg-inherit hover:underline"
+					>{navData.rope_access}</DropdownItem
+				>
+				<DropdownItem
+					href="/arborist-service"
+					class="decoration-viking-yellow decoration-4 underline-offset-8 hover:bg-inherit hover:underline"
+					>{navData.arborism}</DropdownItem
+				>
+			</Dropdown>
 		</div>
 		<div>
 			<ul class="lg:mt-8 lg:space-y-3">
 				<li class="mt-7">
-					<a href="" class="border-viking-yellow hover:border-b-4">Apie mus</a>
+					<a href="/#about-us" class="border-viking-yellow hover:border-b-4">{navData.about}</a>
 				</li>
 				<li class="mt-7">
-					<a href="" class="border-viking-yellow hover:border-b-4">DUK</a>
+					<a href="/#faq" class="border-viking-yellow hover:border-b-4">{navData.faq}</a>
 				</li>
 			</ul>
 		</div>

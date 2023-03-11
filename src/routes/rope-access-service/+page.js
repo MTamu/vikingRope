@@ -1,8 +1,15 @@
+import { language } from '$stores/language'
+
+let pageLanguage
+
+language.subscribe(value => {
+  pageLanguage = value
+})
 
 export async function load ({ parent }) {
   const { storyblokApi } = await parent()
 
-  const dataStory = await storyblokApi.get('cdn/stories/rope-access-page', {
+  const dataStory = await storyblokApi.get(`cdn/stories/rope-access-page?language=${pageLanguage}`, {
     version: 'draft'
   })
 

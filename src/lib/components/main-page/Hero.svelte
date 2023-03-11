@@ -6,8 +6,6 @@
 
 	const btn = cmsData.button[0];
 
-	console.log(cmsData);
-
 	$: resolvedTitleHtml = renderRichText(cmsData.main_title);
 </script>
 

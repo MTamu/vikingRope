@@ -25,12 +25,12 @@
 </script>
 
 <div class="app">
-	<Header cmsData={data.contactsData} />
+	<Header contactsData={data.contactsData} navData={data.navData} />
 
 	<main>
 		<slot />
 	</main>
 
 	<div />
-	<Footer cmsData={data.footerData} />
+	<Footer cmsData={data.footerData} navData={data.navData} />
 </div>
