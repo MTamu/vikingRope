@@ -10,7 +10,7 @@
 	>
 		<div class="order-last flex flex-col items-center gap-5 lg:order-first">
 			<img src="/img/logo.png" alt="" class="w-32" />
-			<div class="text-xs">© 2023. Visos teisės saugomos</div>
+			<div class="text-xs">{cmsData.rights}</div>
 		</div>
 		<div>
 			<ul class="lg:mt-8 lg:space-y-3">

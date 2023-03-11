@@ -21,7 +21,7 @@
 					</div>
 				</div>
 				<div class="md:order-{Math.abs(service.order)} mt-10 md:mt-0 md:pt-6">
-					<img class="rounded-sm" src={service.img.filename} alt="" />
+					<img class="rounded-sm" src="{service.img.filename}/m/filters:quality(50)" alt="" />
 				</div>
 				<div class="mt-10 mb-10 flex justify-center md:hidden">
 					<Btn text={service.btn[0].text} href={service.btn[0].href} />
