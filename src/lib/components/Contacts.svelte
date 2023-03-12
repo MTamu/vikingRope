@@ -4,7 +4,7 @@
 </script>
 
 <section id="contacts" class="{bgColor} mt-0">
-	<div class="mx-auto flex max-w-screen-xl justify-center pt-24 pb-32 md:px-10">
+	<div class="mx-auto flex max-w-screen-xl justify-center py-28 md:px-10">
 		<div class="flex flex-col gap-14 border-l-small border-viking-yellow px-4 text-center md:border-l-medium md:px-10">
 			<h3 class="font-medium tracking-wide">{cmsData.title}</h3>
 			<div class="flex flex-col gap-10">

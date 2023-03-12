@@ -11,11 +11,6 @@
 	export let data;
 </script>
 
-<svelte:head>
-	<meta name="description" content="Svelte demo app" />
-	<!-- To do -->
-</svelte:head>
-
 <Hero cmsData={data.story.hero} />
 <Services cmsData={data.story.services} />
 <About cmsData={data.story.about} />

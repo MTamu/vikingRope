@@ -10,7 +10,7 @@
 </script>
 
 <section class=" pt-16 sm:pt-28">
-	<div class="md mx-auto max-w-screen-xl p-3 pb-16 md:pb-32 lg:px-10 lg:pt-10">
+	<div class="md mx-auto max-w-screen-xl p-3 pb-16 md:pb-28 lg:px-10 lg:pt-10">
 		<div class="grid auto-cols-fr sm:gap-2 md:grid-flow-col md:gap-10 lg:gap-32">
 			<div class="">
 				<div class="border-l-8 border-viking-yellow pl-4 sm:font-medium">
@@ -36,7 +36,7 @@
 		<div class=" mt-32 grid auto-cols-fr gap-10 md:mt-20 md:grid-flow-col md:gap-4">
 			{#each cmsData.advantages_blocks as block}
 				<div class="flex">
-					<div class="mr-8 flex-shrink-0">
+					<div class="mr-3 mt-1 flex-shrink-0">
 						{@html block.logo}
 					</div>
 					<div class="space-y-3">
