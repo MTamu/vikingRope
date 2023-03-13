@@ -24,7 +24,7 @@
 
 <section class="">
 	<div class="mx-auto max-w-screen-xl p-3 sm:p-10 md:px-10 md:py-20">
-		<div class="mb-6 flex justify-center">
+		<div class="mb-6">
 			<div class="inline-block border-b-8 border-viking-yellow pl-10 leading-none">
 				<h2 class="uppercase">{cmsData.title}</h2>
 			</div>
