@@ -28,8 +28,6 @@ export async function load () {
   const contactsData = contacts.data.story.content.body[0]
   const navData = mainPageData.data.story.content.body[4]
 
-  console.log(navData)
-
   return {
     storyblokApi,
     footerData,

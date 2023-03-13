@@ -21,7 +21,6 @@ export async function load ({ parent }) {
     componentList[element.component] = element
   })
 
-  console.log(componentList)
   return {
     story: componentList
   }
