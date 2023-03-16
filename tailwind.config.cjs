@@ -8,7 +8,8 @@ module.exports = {
       colors: {
         'viking-yellow': '#E5AA33',
         'viking-grey-background': '#F7F7F7',
-        'viking-grey-textBox': '#DFE0DF'
+        'viking-grey-textBox': '#DFE0DF',
+        'viking-yellow-trans': '#e5aa33a1'
       },
       borderWidth: {
         xl: '20px',

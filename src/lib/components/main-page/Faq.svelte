@@ -1,6 +1,5 @@
 <script>
-	import { AccordionItem, Accordion } from 'flowbite-svelte';
-	import { renderRichText } from '@storyblok/svelte';
+	import FaqList from '../elements/Accordion.svelte';
 
 	export let cmsData;
 
@@ -16,17 +15,10 @@
 				<h2 class="uppercase">{cmsData.title}</h2>
 			</div>
 		</div>
-		<Accordion flush>
+		<div class="divide-y-2 divide-black">
 			{#each qAndA as item}
-				<AccordionItem>
-					<span slot="header" class="text-lg font-normal text-black">
-						{@html renderRichText(item.question)}
-					</span>
-					<p class="mb-2 border-4 border-viking-yellow p-2 text-black">
-						{@html renderRichText(item.answer)}
-					</p>
-				</AccordionItem>
+				<FaqList primaryText={item.question} secondaryText={item.answer} />
 			{/each}
-		</Accordion>
+		</div>
 	</div>
 </section>

@@ -9,7 +9,7 @@
 	$: descriptionText = renderRichText(data.story.hero_section.service_description);
 </script>
 
-<section class="sm:pt-28">
+<section class="pt-20">
 	<div class="mx-auto max-w-screen-xl p-3 sm:px-10 md:pb-20 lg:pt-10">
 		<div class="mb-6">
 			<div class="inline-block border-b-8 border-viking-yellow pl-2 leading-none md:pl-10">
