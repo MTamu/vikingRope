@@ -1,5 +1,4 @@
 <script>
-	import { each } from 'svelte/internal';
 	import Btn from '../elements/Btn.svelte';
 
 	export let cmsData;

@@ -1,5 +1,4 @@
 <script>
-	import { Dropdown, DropdownItem } from 'flowbite-svelte';
 	import { onMount } from 'svelte';
 	import { language } from '$stores/language';
 	import { invalidateAll } from '$app/navigation';
@@ -8,11 +7,11 @@
 	export let navData;
 
 	// onMount(() => {
-	// 	const userLocation = Intl.DateTimeFormat().resolvedOptions().timeZone;
+	//  const userLocation = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-	// 	if (!userLocation.includes('Vilnius')) {
-	// 		pageLanguage = 'EN';
-	// 	}
+	//  if (!userLocation.includes('Vilnius')) {
+	//    pageLanguage = 'EN';
+	//  }
 	// });
 	// Set language based on user location
 
@@ -30,10 +29,33 @@
 	}
 
 	const handleMobileMenu = (event) => {
-		const element = event.target.nodeName;
+		const { nodeName } = event.target;
+		switch (nodeName) {
+			case 'A':
+			case 'svg':
+			case 'path':
+				mobileNavOpen = !mobileNavOpen;
+				break;
+			default:
+				break;
+		}
+	};
 
-		if (element === 'A' || element === 'svg' || element === 'path') {
-			mobileNavOpen = !mobileNavOpen;
+	const openCloseDropDown = () => {
+		document.querySelector('#serviceDropdown').classList.toggle('hidden');
+	};
+
+	onMount(async () => {
+		window.addEventListener('click', handleOutsideClick);
+	});
+
+	const handleOutsideClick = (event) => {
+		const dropdown = document.querySelector('#serviceDropdown');
+
+		if (!event.target.closest('.dropdown')) {
+			if (!dropdown.classList.contains('hidden')) {
+				dropdown.classList.add('hidden');
+			}
 		}
 	};
 </script>
@@ -42,8 +64,10 @@
 	<nav class="mx-auto hidden max-w-screen-xl justify-end lg:mr-auto lg:flex">
 		<div class="lg:flex lg:gap-10 lg:p-6 lg:text-lg">
 			<a href="/" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline">{navData.home}</a>
-			<div class="relative">
-				<button id="services-btn" class="relative flex items-center gap-1">
+
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<div class="dropdown relative inline-block" on:click={openCloseDropDown}>
+				<button class="dropbtn flex items-center gap-1">
 					<span class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline"
 						>{navData.services}</span
 					>
@@ -51,6 +75,19 @@
 						<img src="img/arrowDown.svg" alt="" />
 					</div>
 				</button>
+
+				<div id="serviceDropdown" class="dropdown-content absolute z-10 hidden whitespace-nowrap">
+					<a
+						href="/rope-access-service"
+						class="block  decoration-viking-yellow decoration-4 underline-offset-8 hover:bg-inherit hover:underline"
+						>{navData.rope_access}</a
+					>
+					<a
+						href="/arborist-service"
+						class="block decoration-viking-yellow decoration-4 underline-offset-8 hover:bg-inherit hover:underline"
+						>{navData.arborism}</a
+					>
+				</div>
 			</div>
 
 			<a href="/#about-us" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline"
@@ -60,19 +97,6 @@
 			<a href="/#contacts" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline"
 				>{navData.contacts}</a
 			>
-
-			<Dropdown triggeredBy="#services-btn" class="dropdownMenu z-20 w-44">
-				<DropdownItem
-					href="/rope-access-service"
-					class="decoration-viking-yellow decoration-4 underline-offset-8 hover:bg-inherit hover:underline"
-					>{navData.rope_access}</DropdownItem
-				>
-				<DropdownItem
-					href="/arborist-service"
-					class="decoration-viking-yellow decoration-4 underline-offset-8 hover:bg-inherit hover:underline"
-					>{navData.arborism}</DropdownItem
-				>
-			</Dropdown>
 
 			<div class="lan-select flex items-start gap-2">
 				<div class="pt-2">

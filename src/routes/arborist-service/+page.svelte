@@ -6,8 +6,6 @@
 
 	export let data;
 
-	console.log(data);
-
 	$: descriptionText = renderRichText(data.story.hero_section.service_description);
 </script>
 

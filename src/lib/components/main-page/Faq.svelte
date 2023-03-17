@@ -1,5 +1,5 @@
 <script>
-	import FaqList from '../elements/Accordion.svelte';
+	import Accordion from '../elements/Accordion.svelte';
 
 	export let cmsData;
 
@@ -17,7 +17,7 @@
 		</div>
 		<div class="divide-y-2 divide-black">
 			{#each qAndA as item}
-				<FaqList primaryText={item.question} secondaryText={item.answer} />
+				<Accordion primaryText={item.question} secondaryText={item.answer} />
 			{/each}
 		</div>
 	</div>
