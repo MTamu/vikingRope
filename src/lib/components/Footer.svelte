@@ -1,5 +1,6 @@
 <script>
-	import { Dropdown, DropdownItem } from 'flowbite-svelte';
+	import Dropdown from './elements/Dropdown.svelte';
+
 	export let cmsData;
 	export let navData;
 </script>
@@ -18,29 +19,9 @@
 					<a href="/" class="border-viking-yellow hover:border-b-4">{navData.home}</a>
 				</li>
 				<li class="mt-7 flex justify-center lg:block">
-					<button id="services-btn" class=" flex items-center gap-1">
-						<span class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline"
-							>{navData.services}</span
-						>
-						<div class="sm:pt-1">
-							<img src="img/arrowDown.svg" alt="" />
-						</div>
-					</button>
+					<Dropdown {navData} componentName={'-footer'} bgColor={'bg-viking-grey-background'} />
 				</li>
 			</ul>
-
-			<Dropdown triggeredBy="#services-btn" class="dropdownMenu z-20 w-44">
-				<DropdownItem
-					href="/rope-access-service"
-					class="decoration-viking-yellow decoration-4 underline-offset-8 hover:bg-inherit hover:underline"
-					>{navData.rope_access}</DropdownItem
-				>
-				<DropdownItem
-					href="/arborist-service"
-					class="decoration-viking-yellow decoration-4 underline-offset-8 hover:bg-inherit hover:underline"
-					>{navData.arborism}</DropdownItem
-				>
-			</Dropdown>
 		</div>
 		<div>
 			<ul class="lg:mt-8 lg:space-y-3">

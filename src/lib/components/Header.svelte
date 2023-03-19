@@ -1,19 +1,10 @@
 <script>
-	import { onMount } from 'svelte';
 	import { language } from '$stores/language';
 	import { invalidateAll } from '$app/navigation';
+	import Dropdown from './elements/Dropdown.svelte';
 
 	export let contactsData;
 	export let navData;
-
-	// onMount(() => {
-	//  const userLocation = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-	//  if (!userLocation.includes('Vilnius')) {
-	//    pageLanguage = 'EN';
-	//  }
-	// });
-	// Set language based on user location
 
 	let lanSelect = $language; //gets initial value from store
 	let mobileNavOpen = false;
@@ -40,24 +31,6 @@
 				break;
 		}
 	};
-
-	const openCloseDropDown = () => {
-		document.querySelector('#serviceDropdown').classList.toggle('hidden');
-	};
-
-	onMount(async () => {
-		window.addEventListener('click', handleOutsideClick);
-	});
-
-	const handleOutsideClick = (event) => {
-		const dropdown = document.querySelector('#serviceDropdown');
-
-		if (!event.target.closest('.dropdown')) {
-			if (!dropdown.classList.contains('hidden')) {
-				dropdown.classList.add('hidden');
-			}
-		}
-	};
 </script>
 
 <header>
@@ -66,30 +39,8 @@
 			<a href="/" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline">{navData.home}</a>
 
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<div class="dropdown relative inline-block" on:click={openCloseDropDown}>
-				<button class="dropbtn flex items-center gap-1">
-					<span class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline"
-						>{navData.services}</span
-					>
-					<div class="sm:pt-1">
-						<img src="img/arrowDown.svg" alt="" />
-					</div>
-				</button>
 
-				<div id="serviceDropdown" class="dropdown-content absolute z-10 hidden whitespace-nowrap">
-					<a
-						href="/rope-access-service"
-						class="block  decoration-viking-yellow decoration-4 underline-offset-8 hover:bg-inherit hover:underline"
-						>{navData.rope_access}</a
-					>
-					<a
-						href="/arborist-service"
-						class="block decoration-viking-yellow decoration-4 underline-offset-8 hover:bg-inherit hover:underline"
-						>{navData.arborism}</a
-					>
-				</div>
-			</div>
-
+			<Dropdown {navData} componentName={'-header'} />
 			<a href="/#about-us" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline"
 				>{navData.about}</a
 			>
