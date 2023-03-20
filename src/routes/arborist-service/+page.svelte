@@ -23,7 +23,11 @@
 				</div>
 			</div>
 			<div>
-				<img class="rounded-sm" src="{data.story.hero_section.img.filename}/m/filters:quality(50)" alt="Arborist" />
+				<img
+					class="h-auto w-full rounded-sm"
+					src="{data.story.hero_section.img.filename}/m/filters:quality(50)"
+					alt="Arborist"
+				/>
 			</div>
 		</div>
 

@@ -36,7 +36,12 @@
 						{@html renderRichText(sample.sample_description)}
 					</div>
 					<div class="md:{getDisplayOrder(index)[1]} pt-6">
-						<img class="rounded-sm" src="{sample.sample_img[0].filename}/m/filters:quality(50)" alt="Work sample" />
+						<img
+							class="rounded-sm"
+							src="{sample.sample_img[0].filename}/m/filters:quality(50)"
+							loading="lazy"
+							alt="Work sample"
+						/>
 					</div>
 				</div>
 			{/each}
