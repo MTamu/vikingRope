@@ -2,12 +2,25 @@
 	import { language } from '$stores/language';
 	import { invalidateAll } from '$app/navigation';
 	import Dropdown from './elements/Dropdown.svelte';
+	import { navigating } from '$app/stores';
 
 	export let contactsData;
 	export let navData;
 
 	let lanSelect = $language; //gets initial value from store
 	let mobileNavOpen = false;
+
+	let slowLoadTime;
+
+	$: if ($navigating) {
+		slowLoadTime = false;
+
+		setTimeout(() => {
+			slowLoadTime = true;
+		}, 200);
+	} else {
+		slowLoadTime = false;
+	}
 
 	const languages = [
 		{ value: 'lt', name: 'LT' },
@@ -34,6 +47,18 @@
 </script>
 
 <header>
+	{#if $navigating}
+		{#if slowLoadTime}
+			<div class="load-bar-container">
+				<div class="load-bar">
+					<div class="bar" />
+					<div class="bar" />
+					<div class="bar" />
+				</div>
+			</div>
+		{/if}
+	{/if}
+
 	<nav class="mx-auto hidden max-w-screen-xl justify-end lg:mr-auto lg:flex">
 		<div class="lg:flex lg:gap-10 lg:p-6 lg:text-lg">
 			<a href="/" class="decoration-viking-yellow decoration-4 underline-offset-8 hover:underline">{navData.home}</a>
@@ -119,5 +144,57 @@
 		width: 100%;
 		background-color: #fff;
 		z-index: 100010;
+	}
+
+	.load-bar-container {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 200010;
+	}
+
+	.load-bar {
+		position: relative;
+		width: 100%;
+		height: 6px;
+		background-color: #fdba2c;
+	}
+
+	.bar {
+		content: '';
+		display: inline;
+		position: absolute;
+		width: 0;
+		height: 100%;
+		left: 50%;
+		text-align: center;
+	}
+	.bar:nth-child(1) {
+		background-color: #fdba2c;
+		animation: loading 3s linear infinite;
+	}
+	.bar:nth-child(2) {
+		background-color: #005248;
+		animation: loading 3s linear 1s infinite;
+	}
+	.bar:nth-child(3) {
+		background-color: #da4733;
+		animation: loading 3s linear 2s infinite;
+	}
+	@keyframes loading {
+		from {
+			left: 0;
+			width: 0;
+			z-index: 100;
+		}
+		33.3333% {
+			left: 0;
+			width: 100%;
+			z-index: 10;
+		}
+		to {
+			left: 0;
+			width: 100%;
+		}
 	}
 </style>
