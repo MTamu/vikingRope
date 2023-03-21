@@ -4,6 +4,7 @@
 	import './styles.css';
 	import { onMount } from 'svelte';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
+	import Analytics from '../analytics.svelte';
 
 	export let data;
 
@@ -23,6 +24,8 @@
 		root?.classList.add('smoothscroll');
 	});
 </script>
+
+<Analytics />
 
 <div class="app">
 	<Header contactsData={data.contactsData} navData={data.navData} />
