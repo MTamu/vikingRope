@@ -1,7 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/inter-v12-latin_latin-ext-regular.eot');
+  src: url('/fonts/inter-v12-latin_latin-ext-regular.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/inter-v12-latin_latin-ext-regular.woff2') format('woff2'),
+       url('/fonts/inter-v12-latin_latin-ext-regular.woff') format('woff'),
+       url('/fonts/inter-v12-latin_latin-ext-regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/inter-v12-latin_latin-ext-500.eot');
+  src: url('/fonts/inter-v12-latin_latin-ext-500.eot?#iefix') format('embedded-opentype'), 
+       url('/fonts/inter-v12-latin_latin-ext-500.woff2') format('woff2'),
+       url('/fonts/inter-v12-latin_latin-ext-500.woff') format('woff'),
+       url('/fonts/inter-v12-latin_latin-ext-500.ttf') format('truetype')
+      
+} 
 
 
 :root {
