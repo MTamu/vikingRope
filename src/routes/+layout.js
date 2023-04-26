@@ -14,10 +14,10 @@ export async function load () {
   })
   const storyblokApi = await useStoryblokApi()
 
-  const footer = await storyblokApi.get('cdn/stories/footer-section', {
+  const footer = await storyblokApi.get(`cdn/stories/footer-section?language=${pageLanguage}`, {
     version: 'draft'
   })
-  const contacts = await storyblokApi.get('cdn/stories/contact-section', {
+  const contacts = await storyblokApi.get(`cdn/stories/contact-section?language=${pageLanguage}`, {
     version: 'draft'
   })
   const mainPageData = await storyblokApi.get(`cdn/stories/main-page?language=${pageLanguage}`, {
