@@ -15,7 +15,7 @@
 			<div class="">
 				<div class="border-l-8 border-viking-yellow pl-4 sm:font-medium">
 					<div>{cmsData.before_title}</div>
-					<h1 class="mt-1 text-left leading-snug lg:whitespace-nowrap">
+					<h1 class="mt-1 text-left leading-snug">
 						{@html resolvedTitleHtml}
 					</h1>
 				</div>

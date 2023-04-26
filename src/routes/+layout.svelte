@@ -2,9 +2,11 @@
 	import Header from '$components/Header.svelte';
 	import Footer from '$components/Footer.svelte';
 	import './styles.css';
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import Analytics from '../analytics.svelte';
+	import { register } from 'swiper/element/bundle';
+	register();
 
 	export let data;
 

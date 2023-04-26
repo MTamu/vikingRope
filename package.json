@@ -30,6 +30,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@storyblok/svelte": "^2.3.8"
+		"@storyblok/svelte": "^2.3.8",
+		"@sveltejs/adapter-vercel": "^2.4.1",
+		"swiper": "^9.1.1"
 	}
 }

@@ -2,6 +2,8 @@
 	import { renderRichText } from '@storyblok/svelte';
 	export let cmsData;
 
+	console.log(renderRichText(cmsData.description));
+
 	let quote = cmsData.quote[0];
 </script>
 
@@ -12,7 +14,7 @@
 		</div>
 		<div class="flex md:mt-10">
 			<div class="mt-5 flex flex-col gap-12 md:mt-0 md:w-2/3">
-				<div class=" rounded bg-viking-grey-textBox px-6 py-8 md:px-10 md:py-8">
+				<div class="about rounded bg-viking-grey-textBox px-6 py-8 md:px-10 md:py-8">
 					{@html renderRichText(cmsData.description)}
 				</div>
 
@@ -62,14 +64,42 @@
 				<div class="mb-10 inline-block border-b-8 border-viking-yellow pl-10 uppercase leading-none">
 					<h2>{cmsData.feedback_title}</h2>
 				</div>
-				<div class="grid auto-cols-fr gap-5 md:grid-flow-col [&>*]:rounded [&>*]:p-5">
-					{#each cmsData.feedback as feedback}
-						<div class="bg-viking-grey-textBox">
-							{@html renderRichText(feedback.feedback_text)}
-						</div>
-					{/each}
-				</div>
+
+				{#if cmsData.feedback.length > 3}
+					<swiper-container navigation="true" pagination="true" slides-per-view="3" class="[&>*]:p-5">
+						{#each cmsData.feedback as feedback}
+							<swiper-slide>
+								<div class="rounded bg-viking-grey-textBox p-5">
+									{@html renderRichText(feedback.feedback_text)}
+								</div>
+							</swiper-slide>
+						{/each}
+					</swiper-container>
+				{:else}
+					<div class="grid auto-cols-fr gap-5 md:grid-flow-col [&>*]:rounded [&>*]:p-5">
+						{#each cmsData.feedback as feedback}
+							<div class="bg-viking-grey-textBox">
+								{@html renderRichText(feedback.feedback_text)}
+							</div>
+						{/each}
+					</div>
+				{/if}
 			</div>
 		{/if}
 	</div>
 </section>
+
+<style>
+	swiper-container {
+		padding: 50px;
+	}
+
+	swiper-slide {
+		text-align: center;
+		font-size: 18px;
+		background: #fff;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+	}
+</style>

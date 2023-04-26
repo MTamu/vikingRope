@@ -5,7 +5,7 @@
 </script>
 
 <section class="bg-viking-grey-background">
-	<div class="mx-auto max-w-screen-xl flex-col p-3 py-10 md:flex md:gap-28 md:p-0 md:px-10 md:py-20">
+	<div class="mx-auto max-w-screen-xl flex-col p-3 py-10 md:flex md:gap-16 md:p-0 md:px-10 md:py-20">
 		{#each cmsData.service as service}
 			<div class="grid auto-cols-fr sm:gap-2 md:grid-flow-col md:gap-10 lg:gap-32">
 				<div class=" md:order-2 md:space-y-5">

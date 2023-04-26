@@ -30,7 +30,7 @@
 
 <details on:toggle={handleDropdown}>
 	<summary class="group flex items-center justify-between py-5 hover:bg-gray-200 focus:outline-none"
-		><span class="pr-20 text-xl font-medium transition duration-100 ease-in-out group-hover:translate-x-6"
+		><span class="pr-20 text-lg font-medium transition duration-100 ease-in-out group-hover:translate-x-6"
 			>{@html renderRichText(primaryText)}</span
 		>
 		<svg
@@ -46,7 +46,7 @@
 			/>
 		</svg>
 	</summary>
-	<div class="text -mt-3 max-w-screen-lg px-6 pb-6 leading-relaxed tracking-wide text-black text-opacity-60">
+	<div class=" -mt-3 max-w-screen-lg px-6 pb-6 text-sm leading-relaxed tracking-wide text-black text-opacity-70">
 		<p>
 			{@html renderRichText(secondaryText)}
 		</p>

@@ -36,12 +36,31 @@
 						{@html renderRichText(sample.sample_description)}
 					</div>
 					<div class="md:{getDisplayOrder(index)[1]} pt-6">
-						<img
-							class="rounded-sm"
-							src="{sample.sample_img[0].filename}/m/filters:quality(50)"
-							loading="lazy"
-							alt="Work sample"
-						/>
+						<swiper-container
+							class="mySwiper"
+							navigation="true"
+							pagination="true"
+							keyboard="true"
+							mousewheel="true"
+							css-mode="true"
+						>
+							<swiper-slide
+								><img
+									class="rounded-sm"
+									src="{sample.sample_img[0].filename}/m/filters:quality(50)"
+									loading="lazy"
+									alt="Work sample"
+								/></swiper-slide
+							>
+							<swiper-slide
+								><img
+									class="rounded-sm"
+									src="{sample.sample_img[0].filename}/m/filters:quality(50)"
+									loading="lazy"
+									alt="Work sample"
+								/></swiper-slide
+							>
+						</swiper-container>
 					</div>
 				</div>
 			{/each}
@@ -75,5 +94,17 @@
 
 	.order-2 {
 		order: 2;
+	}
+
+	swiper-container {
+		width: 100%;
+		height: 100%;
+	}
+
+	swiper-slide img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 </style>
