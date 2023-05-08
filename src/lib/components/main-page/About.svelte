@@ -14,7 +14,7 @@
 		</div>
 		<div class="flex md:mt-10">
 			<div class="mt-5 flex flex-col gap-12 md:mt-0 md:w-2/3">
-				<div class="about rounded bg-viking-grey-textBox px-6 py-8 md:px-10 md:py-8">
+				<div class="about rounded bg-viking-grey-textBox px-6 py-8 md:space-y-5 md:px-10 md:py-8">
 					{@html renderRichText(cmsData.description)}
 				</div>
 
@@ -101,5 +101,9 @@
 		justify-content: center;
 		align-items: center;
 		display: flex;
+	}
+
+	.about {
+		margin-bottom: 1rem;
 	}
 </style>

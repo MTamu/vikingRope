@@ -1,5 +1,7 @@
 import { language } from '$stores/language'
 
+export const ssr = false
+
 let pageLanguage
 
 language.subscribe(value => {

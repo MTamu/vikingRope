@@ -1,10 +1,10 @@
 <script>
-	import Btn from '../elements/Btn.svelte';
 	import { renderRichText } from '@storyblok/svelte';
 
 	export let cmsData;
 
 	const samples = cmsData.samples;
+	console.log(samples);
 	const itemsToLoad = 2;
 
 	let loadCount = itemsToLoad;
@@ -37,29 +37,22 @@
 					</div>
 					<div class="md:{getDisplayOrder(index)[1]} pt-6">
 						<swiper-container
+							style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
 							class="mySwiper"
 							navigation="true"
 							pagination="true"
 							keyboard="true"
-							mousewheel="true"
-							css-mode="true"
 						>
-							<swiper-slide
-								><img
-									class="rounded-sm"
-									src="{sample.sample_img[0].filename}/m/filters:quality(50)"
-									loading="lazy"
-									alt="Work sample"
-								/></swiper-slide
-							>
-							<swiper-slide
-								><img
-									class="rounded-sm"
-									src="{sample.sample_img[0].filename}/m/filters:quality(50)"
-									loading="lazy"
-									alt="Work sample"
-								/></swiper-slide
-							>
+							{#each sample.sample_img as img}
+								<swiper-slide
+									><img
+										class="swiper-zoom-container max-h-80 rounded-sm"
+										src="{img.filename}/m/filters:quality(50)"
+										loading="lazy"
+										alt={img.alt}
+									/></swiper-slide
+								>
+							{/each}
 						</swiper-container>
 					</div>
 				</div>

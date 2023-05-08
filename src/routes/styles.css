@@ -32,7 +32,7 @@
 :root {
   font-family: 'Inter';
   font-size: 18px;
-	--swiper-theme-color: #E5AA33;
+	--swiper-theme-color: #f2d21e;
 }
 
 html.smoothscroll{ scroll-behavior: smooth }
