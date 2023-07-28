@@ -46,7 +46,7 @@
 	};
 </script>
 
-<header>
+<header class="overflow-y-scroll lg:overflow-y-visible">
 	{#if $navigating}
 		{#if slowLoadTime}
 			<div class="load-bar-container">
@@ -105,7 +105,7 @@
 		</button>
 		{#if mobileNavOpen}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<div on:click={handleMobileMenu} class="flex h-screen flex-col items-center gap-14 pt-12">
+			<div on:click={handleMobileMenu} class="mobileMenu flex h-screen flex-col items-center gap-14 pt-12">
 				<a href="/">{navData.home}</a>
 				<a href="/rope-access-service">{navData.rope_access}</a>
 				<a href="/arborist-service">{navData.arborism}</a>
@@ -139,12 +139,16 @@
 	}
 
 	header {
+		-webkit-overflow-scrolling: touch;
 		position: fixed;
 		top: 0;
 		width: 100%;
 		background-color: #fff;
 		z-index: 100010;
-		overflow-y: scroll;
+	}
+
+	.mobileMenu {
+		height: calc(100vh - 65px);
 	}
 
 	.load-bar-container {
