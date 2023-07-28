@@ -16,7 +16,7 @@
 				<h1 class="uppercase">{data.story.hero_section.title}</h1>
 			</div>
 		</div>
-		<div class="grid auto-cols-fr sm:gap-2 md:grid-flow-col md:gap-10 lg:gap-32">
+		<div class="grid auto-cols-fr gap-4 md:grid-flow-col md:gap-10 lg:gap-32">
 			<div>
 				<div class="mt-10 md:mt-0">
 					{@html descriptionText}
@@ -24,7 +24,7 @@
 			</div>
 			<div>
 				<img
-					class="h-auto w-full rounded-sm"
+					class="h-auto w-full rounded"
 					src="{data.story.hero_section.img.filename}/m/filters:quality(50)"
 					alt="Arborist"
 				/>

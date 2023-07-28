@@ -4,8 +4,6 @@
 
 	export let cmsData, contactsData;
 
-	console.log(cmsData);
-
 	const btn = cmsData.button[0];
 
 	// $: resolvedTitleHtml = renderRichText(cmsData.main_title);

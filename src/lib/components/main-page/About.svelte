@@ -2,8 +2,6 @@
 	import { renderRichText } from '@storyblok/svelte';
 	export let cmsData;
 
-	console.log(renderRichText(cmsData.description));
-
 	let quote = cmsData.quote[0];
 </script>
 

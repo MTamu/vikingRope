@@ -46,9 +46,8 @@
 							{#each sample.sample_img as img}
 								<swiper-slide
 									><img
-										class="swiper-zoom-container max-h-80 rounded-sm"
+										class="swiper-zoom-container max-h-80 rounded"
 										src="{img.filename}/m/filters:quality(50)"
-										loading="lazy"
 										alt={img.alt}
 									/></swiper-slide
 								>
@@ -91,7 +90,7 @@
 
 	swiper-container {
 		width: 100%;
-		height: 100%;
+		/* height: 100%; */
 	}
 
 	swiper-slide img {

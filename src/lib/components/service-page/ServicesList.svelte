@@ -5,7 +5,7 @@
 </script>
 
 <section>
-	<div class="mt-24 grid md:mt-20 md:grid-cols-2">
+	<div class="mt-16 grid sm:mt-24 md:mt-20 md:grid-cols-2">
 		<div>
 			<div class="inline-block border-b-8 border-viking-yellow pl-6 uppercase leading-none">
 				<h2>{cmsData.title}</h2>

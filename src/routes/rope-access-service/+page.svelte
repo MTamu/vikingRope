@@ -16,14 +16,14 @@
 				<h1 class="uppercase">{data.story.hero_section.title}</h1>
 			</div>
 		</div>
-		<div class="grid auto-cols-fr sm:gap-2 md:grid-flow-col md:gap-10 lg:gap-32">
+		<div class="grid auto-cols-fr gap-4 md:grid-flow-col md:gap-10 lg:gap-32">
 			<div>
 				<div class="mt-10 md:mt-0">
 					{@html descriptionText}
 				</div>
 			</div>
 			<div>
-				<img class="rounded-sm" src="{data.story.hero_section.img.filename}/m/filters:quality(50)" alt="Arborist" />
+				<img class="rounded" src="{data.story.hero_section.img.filename}/m/filters:quality(50)" alt="Arborist" />
 			</div>
 		</div>
 
