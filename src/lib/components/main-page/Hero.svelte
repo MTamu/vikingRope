@@ -2,11 +2,13 @@
 	import Btn from '../elements/Btn.svelte';
 	import { renderRichText } from '@storyblok/svelte';
 
-	export let cmsData;
+	export let cmsData, contactsData;
+
+	console.log(cmsData);
 
 	const btn = cmsData.button[0];
 
-	$: resolvedTitleHtml = renderRichText(cmsData.main_title);
+	// $: resolvedTitleHtml = renderRichText(cmsData.main_title);
 </script>
 
 <section class=" pt-16 sm:pt-28">
@@ -16,12 +18,12 @@
 				<div class="border-l-8 border-viking-yellow pl-4 sm:font-medium">
 					<div>{cmsData.before_title}</div>
 					<h1 class="mt-1 text-left leading-snug">
-						{@html resolvedTitleHtml}
+						{cmsData.main_title}
 					</h1>
 				</div>
-				<p class="mt-5 ml-6 hidden font-medium md:block">
+				<div class="mt-1 ml-6 hidden font-medium md:block">
 					{cmsData.short_description}
-				</p>
+				</div>
 				<div class="hidden md:block">
 					<Btn text={btn.text} href={'/#contacts'} customStyle={'ml-6'} />
 				</div>
@@ -41,7 +43,9 @@
 				</svg>
 			</div>
 			<div class="flex justify-center md:hidden">
-				<a class="rounded bg-viking-yellow p-2 font-medium tracking-wider" href="tel:+37065482654">+37065482654</a>
+				<a class="rounded bg-viking-yellow p-2 font-medium tracking-wider" href="tel:{contactsData.phone}"
+					>{contactsData.phone}</a
+				>
 			</div>
 		</div>
 		<div class=" mt-32 grid auto-cols-fr gap-10 md:mt-20 md:grid-flow-col md:gap-4">

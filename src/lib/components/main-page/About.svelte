@@ -13,13 +13,13 @@
 			<h2 class="uppercase">{cmsData.title}</h2>
 		</div>
 		<div class="flex md:mt-10">
-			<div class="mt-5 flex flex-col gap-12 md:mt-0 md:w-2/3">
-				<div class="about rounded bg-viking-grey-textBox px-6 py-8 md:space-y-5 md:px-10 md:py-8">
+			<div class="mt-5 flex flex-col gap-8 md:mt-0 md:w-2/3">
+				<div class="about rounded bg-viking-grey-textBox px-6 py-8 md:space-y-3 md:px-10 md:py-8">
 					{@html renderRichText(cmsData.description)}
 				</div>
 
 				{#if quote !== undefined}
-					<div class="hidden border-l-xl border-viking-yellow text-center text-xl font-medium md:block ">
+					<div class="mx-10 hidden border-l-xl border-viking-yellow text-center text-xl font-medium md:block ">
 						<div class=" ty-5 flex flex-col gap-6 px-10 py-5 pr-20">
 							<p>
 								{@html renderRichText(quote.description)}

@@ -4,7 +4,7 @@
 	export let cmsData;
 
 	const samples = cmsData.samples;
-	console.log(samples);
+
 	const itemsToLoad = 2;
 
 	let loadCount = itemsToLoad;

@@ -9,7 +9,9 @@
 			<h3 class="font-medium tracking-wide">{cmsData.title}</h3>
 			<div class="flex flex-col gap-10">
 				<div class="">
-					<a class="rounded bg-viking-yellow p-2 font-medium tracking-wider" href="tel:+37065482654">{cmsData.phone}</a>
+					<a class="rounded bg-viking-yellow p-2 font-medium tracking-wider" href="tel:{cmsData.phone}"
+						>{cmsData.phone}</a
+					>
 				</div>
 				<div>
 					<a class="rounded bg-viking-yellow p-2 font-medium tracking-wider" href="mailto:vikingropeaccess@gmail.com"
