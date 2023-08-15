@@ -4,8 +4,6 @@
 
 	export let cmsData, contactsData;
 
-	const btn = cmsData.button[0];
-
 	// $: resolvedTitleHtml = renderRichText(cmsData.main_title);
 </script>
 
@@ -23,7 +21,7 @@
 					{cmsData.short_description}
 				</div>
 				<div class="hidden md:block">
-					<Btn text={btn.text} href={'/#contacts'} customStyle={'ml-6'} />
+					<Btn text={cmsData.button[0].text} href={'/#contacts'} customStyle={'ml-6'} />
 				</div>
 			</div>
 			<div class="p-10 sm:basis-0 sm:p-10 md:p-0">
