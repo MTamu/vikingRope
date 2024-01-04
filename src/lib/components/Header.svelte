@@ -75,10 +75,10 @@
 			>
 
 			<div class="lan-select flex items-start gap-2">
-				<div class="pt-2">
-					<img src="img/lang.svg" alt="" />
+				<div class="lan-icon">
+					<img src="img/lang.svg" alt="" width="16" height="16" />
 				</div>
-				<select bind:value={lanSelect} on:change={changeLanguage} class="border-none py-0 pl-0 pr-7 focus:outline-none">
+				<select bind:value={lanSelect} on:change={changeLanguage} class="border-none pt-0 pl-0 pr-7 focus:outline-none">
 					{#each languages as language}
 						<option value={language.value}>{language.name}</option>
 					{/each}
@@ -128,6 +128,10 @@
 </header>
 
 <style>
+	.lan-icon {
+		padding-top: 0.6rem;
+	}
+
 	select {
 		appearance: none;
 		background-image: url('/img/arrowDown.svg');
