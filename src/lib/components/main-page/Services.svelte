@@ -2,6 +2,7 @@
 	import Btn from '../elements/Btn.svelte';
 
 	export let cmsData;
+	console.log(cmsData);
 </script>
 
 <section class="bg-viking-grey-background">
@@ -20,7 +21,14 @@
 					</div>
 				</div>
 				<div class="md:order-{Math.abs(service.order)} mt-10 md:mt-0">
-					<img class="rounded-sm" src="{service.img.filename}/m/filters:quality(50)" alt="" loading="lazy" />
+					<img
+						class="rounded-sm"
+						src="{service.img.filename}/m/filters:quality(50)"
+						alt=""
+						loading="lazy"
+						width="523"
+						height="392"
+					/>
 				</div>
 				<div class="mt-10 mb-10 flex justify-center md:hidden">
 					<Btn text={service.btn[0].text} href={service.btn[0].href} />
@@ -29,3 +37,10 @@
 		{/each}
 	</div>
 </section>
+
+<style>
+	img {
+		width: 100%;
+		height: auto;
+	}
+</style>

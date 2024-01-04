@@ -10,7 +10,7 @@
 		class="mx-auto grid auto-cols-auto pt-10 pb-14 text-center lg:max-w-screen-xl lg:grid-flow-col lg:justify-between lg:gap-5 lg:p-10 lg:pb-0 lg:text-left"
 	>
 		<div class="order-last flex flex-col items-center gap-5 lg:order-first">
-			<img src="/img/logo.png" alt="" class="w-32" />
+			<img src="/img/logo.png" alt="" width="144" height="160" />
 			<div class="text-xs">{cmsData.rights}</div>
 		</div>
 		<div>
