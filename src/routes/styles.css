@@ -30,7 +30,7 @@
 
 
 :root {
-  font-family: 'Inter';
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 18px;
 	--swiper-theme-color: #f2d21e;
 }
